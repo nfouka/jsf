@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+      
+      
+    <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	 xmlns:f="http://java.sun.com/jsf/core"
+	 xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">  
+      
+  <ui:composition template="/WEB-INF/include/template.xhtml">
+    <ui:define name="head">
+        <title>JSF Bootstrap</title>
+        <!-- Custom styles for this template -->
+        <h:outputStylesheet name="css/starter-template.css"/>
+
+    </ui:define>
+    <ui:define name="body">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Application JSF2</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+       <h:outputLabel value="Profile : ${dataScrollerBean.logger}" styleClass="logged"/> 
+             <form action="${request.contextPath}/appLogout" method="POST" class="lagout">
+        <input type="submit" value="Logout"/>
+        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>		
+      </form> 
+    </nav>
+    <div class="container-fluid">
+
+      <div class="starter-template">
+
+  <div class="jumbotron">
+    <h1>Spring Security With Hibernate/JSF2 PrimeFaces</h1>
+    <p class="subtitle">Bootstrap is the most popular HTML, CSS, and JS framework for developing
+    responsive</p>
+  </div>
+
+      </div>
+      
+       <h3>Spring 4 Security  + JSF 2 + PrimeFaces 5  Integration Example</h3>
+      
+      
+      <h:form>
+    <p:dataTable var="car" value="#{dataScrollerBean.students}" rows="10"
+                         paginator="true"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         rowsPerPageTemplate="10,15,20">
+        <p:column headerText="Id">
+            <h:outputText value="#{car.student_id}" />
+        </p:column>
+ 
+        <p:column headerText="Year">
+            <h:outputText value="#{car.email}" />
+        </p:column>
+ 
+        <p:column headerText="first_name">
+            <h:outputText value="#{car.first_name}" />
+        </p:column>
+ 
+        <p:column headerText="last_name">
+            <h:outputText value="#{car.last_name}" />
+        </p:column>
+        
+        
+        <p:column headerText="Phone">
+            <h:outputText value="#{car.phone}" />
+        </p:column>
+        
+        
+        
+    	</p:dataTable>
+</h:form>
+
+		
+      
+
+    </div><!-- /.container -->
+
+    </ui:define>
+  </ui:composition>
+        
+</html>
+

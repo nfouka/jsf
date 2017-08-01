@@ -1,0 +1,35 @@
+.logged{
+	color: #FA8744  ; 
+}
+
+
+body {
+    
+}
+
+.starter-template {
+    padding: 40px  ;
+    text-align: center;
+}
+
+
+.jumbotron{
+	margin-top: 40px; 
+}
+
+.subtitle{
+	color: red ; 
+}
+
+.lagout{
+	float: right;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: black;
+  font-size: 19px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  
+}
